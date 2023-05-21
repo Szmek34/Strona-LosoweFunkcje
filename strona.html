@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>StronaPowtórzeniowa</title>
+    <script>
+        function mnozenie(){
+            var x = parseFloat(prompt("Podaj 1 liczbę"))
+            var y = parseFloat(prompt("Podaj 2 liczbę"))
+            alert (x*y)
+            
+        }
+        function Napisy(){
+            var Napis = prompt("Podaj Napis")
+            alert (Napis.length)
+        }
+        function PowtarzanieNapisow(){
+            var Napis2 = prompt("Podaj Napis")
+            var ilosc  = parseInt(prompt("Podaj ilość napisów"))
+            for(i = 1; i<=ilosc ; i++)
+            alert(Napis2 + " ");
+        }
+        function ToUpperKase(){
+            var Napis3 = prompt("Podaj Napis")
+            alert(Napis3.toUpperCase())
+        }
+        
+
+    </script>
+    <style>
+        html{
+            background-color: darkcyan;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .dkwadraty{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(50% - 8px);
+            height: calc(50% - 8px);
+            background-color: darkcyan;
+            border: 2px gray solid;
+            
+        }
+        .mkwadraty{
+            display: flex;
+            flex-wrap: wrap;
+            height: 40%;
+            width: 45%;
+            background-color: burlywood;
+            border:2px solid indianred;
+        }
+        fieldset{
+            text-align: center;
+            border: 2px black solid;
+            width: auto;
+            background-color: burlywood;
+        }
+        button{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <fieldset><h1>Nagłówek Strony</h1></fieldset>
+    <div style="display: flex;flex-wrap: wrap;flex-direction: row; width: 100%; height: 925px;">
+        
+        <div class="dkwadraty">
+            <div class="mkwadraty">
+                <button type="button" onclick="mnozenie()"><h3> Mnożenie </h3></button>
+            </div>
+            
+        </div>
+        <div class="dkwadraty">
+            <div class="mkwadraty">
+                <button type="button" onclick="Napisy()"><h3> Długość Napisów </h3></button>
+            </div>
+            
+        </div>
+        <div class="dkwadraty">
+            <div class="mkwadraty">
+                <button type="button" onclick="PowtarzanieNapisow()"><h3> Powtarzanie Napisów w alertach</h3></button>
+            </div>
+        
+        </div>
+        <div class="dkwadraty">
+            <div class="mkwadraty">
+                <button type="button" onclick="ToUpperKase()"><h3> Zwiększanie Napsów </h3></button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
